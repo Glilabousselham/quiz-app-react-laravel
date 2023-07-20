@@ -1,0 +1,26 @@
+.side-bar-manu-item {
+    padding-inline: 10px;
+    padding-block: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: .3s;
+}
+
+.side-bar-manu-item:hover:not(.side-bar-manu-item-active) {
+    background-color: #ececec;
+}
+
+.side-bar-manu-item-active {
+    background-color: #7fdbff;
+}
+
+
+.my-side-bar {
+    transition-property: width;
+    transition-duration: .3s;
+}
+
+.side-bar-manu-item div {
+    white-space: nowrap;
+}
