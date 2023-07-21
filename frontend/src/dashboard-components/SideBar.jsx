@@ -41,7 +41,7 @@ function SideBarMenuItem({ children, link, open }) {
 
         <div onClick={() => {
             n(link)
-        }} className={`d-flex gap-2 fs-5 side-bar-manu-item ${active}`}>
+        }} className={`d-flex gap-2  side-bar-manu-item ${active}`}>
             <div className={`fw-bolder text-center  ${!open && "w-100"}`}>
                 {/* icom */}ic
             </div>
