@@ -5,6 +5,7 @@ import SingUp from './Sing/singup/SingUp';
 import SingIn from './Sing/singin/SingIn';
 import Test from './Test/Test';
 import DashboardLayout from './dashboard-components/DashboardLayout';
+import CurrentTestsPage from './current-tests-page/CurrentTestsPage';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/signin" element={<SingIn />} />
         <Route path="dashboard" element={<DashboardLayout>dashboard</DashboardLayout>} />
         <Route path="dashboard/new-test" element={<DashboardLayout>new test</DashboardLayout>} />
-        <Route path="dashboard/current-tests" element={<DashboardLayout>current Test</DashboardLayout>} />
+        <Route path="dashboard/current-tests" element={<DashboardLayout><CurrentTestsPage /></DashboardLayout>} />
         <Route path="dashboard/tests" element={<DashboardLayout><Test /></DashboardLayout>} />
 
       </Routes>

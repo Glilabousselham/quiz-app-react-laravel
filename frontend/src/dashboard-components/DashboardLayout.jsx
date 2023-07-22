@@ -12,7 +12,8 @@ const DashboardLayout = ({ children }) => {
     }
     return (
         <div className='d-flex p-0 m-0' style={{
-            height: "100vh"
+            height: "100vh",
+            color: "var(--black-color)"
         }}>
 
             <SideBarRelative open={open} />
@@ -26,7 +27,7 @@ const DashboardLayout = ({ children }) => {
                     <NavBar onToggleSideBar={toggle} />
                 </div>
                 {/* content */}
-                <div className='bg-light h-100' >
+                <div style={{ backgroundColor: "var(--bg-dashboard-color)" }} className=' h-100' >
                     {children}
                 </div>
             </div>

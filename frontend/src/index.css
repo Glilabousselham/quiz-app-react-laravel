@@ -21,12 +21,20 @@ div {
 /* define variables */
 :root {
   --primary-color: #7fdbff;
+  --tertiary-color: #E84CFF;
   --white-color: #ffffff;
   --black-color: #333333;
   --place-holder-color: #B1B1B1;
   --text-secondary-color: #666666;
   --bg-dashboard-color: #E8E8E8;
   --bg-input-color: #F2F2F2;
+
+  /* border */
+  --border-radius: 8px;
+
+
+  /* default font size*/
+  font-size: 16px;
 }
 
 /* text color */
