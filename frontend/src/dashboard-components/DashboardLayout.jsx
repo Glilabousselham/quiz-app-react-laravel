@@ -20,18 +20,23 @@ const DashboardLayout = ({ children }) => {
             <SideBarFixed open={open} onClose={toggle} />
 
 
-            <div className="w-100 d-flex flex-column " style={{
-                height: "100vh"
-            }}>
-                <div className="w-100">
-                    <NavBar onToggleSideBar={toggle} />
-                </div>
+            <div className="w-100 d-flex flex-column"
+                style={{
+                    height: "100vh",
+                    overflow: "hidden"
+                }}
+            >
+
+                <NavBar onToggleSideBar={toggle} />
+
                 {/* content */}
-                <div style={{ backgroundColor: "var(--bg-dashboard-color)" }} className='p-1 h-100' >
+                <div
+                    style={{ backgroundColor: "var(--bg-dashboard-color)", height: "100%", overflowY: "auto" }}
+                    className='p-1 ' >
                     {children}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

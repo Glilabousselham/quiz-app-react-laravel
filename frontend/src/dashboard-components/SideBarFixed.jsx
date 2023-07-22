@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SideBar from './SideBar'
+import { MdClose } from 'react-icons/md'
 
 const SideBarFixed = ({ open, onClose }) => {
 
@@ -18,11 +19,11 @@ const SideBarFixed = ({ open, onClose }) => {
         }} className={`shadow z-1 d-block d-md-none pt-2`}>
             {/* side bar header */}
             <div className='d-flex justify-content-end '>
-                <button onClick={onClose} className='btn btn-sm btn-primary mx-1'>
-                    toggle
-                </button>
+
+                <MdClose role='button' onClick={onClose} className='fs-3 mx-1' />
+
             </div>
-            <SideBar />
+            <SideBar onClose={onClose} />
         </div>
     )
 }

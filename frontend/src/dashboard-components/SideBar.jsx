@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import "./SideBar.css"
 import { useLocation, useNavigate } from 'react-router-dom'
-const SideBar = ({ open = true }) => {
+import { MdAdd, MdAddCircle, MdChecklist, MdDashboard, MdTimer } from 'react-icons/md'
+import { IoMdListBox } from "react-icons/io"
+const SideBar = ({ open = true, onClose = null }) => {
 
 
 
@@ -15,10 +17,10 @@ const SideBar = ({ open = true }) => {
             {/* side bar items */}
             <div className=' d-flex flex-column gap-2 fw-medium text-dark  px-1'>
 
-                <SideBarMenuItem open={open} link={"/dashboard"}>Dashboard</SideBarMenuItem>
-                <SideBarMenuItem open={open} link={"/dashboard/tests"}>Tests</SideBarMenuItem>
-                <SideBarMenuItem open={open} link={"/dashboard/new-test"}>New Test</SideBarMenuItem>
-                <SideBarMenuItem open={open} link={"/dashboard/current-tests"}>Current Tests</SideBarMenuItem>
+                <SideBarMenuItem onClose={onClose} open={open} icon={<MdDashboard />} link={"/dashboard"}>Dashboard</SideBarMenuItem>
+                <SideBarMenuItem onClose={onClose} open={open} icon={<IoMdListBox />} link={"/dashboard/tests"}>Tests</SideBarMenuItem>
+                <SideBarMenuItem onClose={onClose} open={open} icon={<MdAddCircle />} link={"/dashboard/new-test"}>New Test</SideBarMenuItem>
+                <SideBarMenuItem onClose={onClose} open={open} icon={<MdTimer />} link={"/dashboard/current-tests"}>Current Tests</SideBarMenuItem>
 
             </div>
 
@@ -29,7 +31,7 @@ const SideBar = ({ open = true }) => {
 export default SideBar
 
 
-function SideBarMenuItem({ children, link, open }) {
+function SideBarMenuItem({ children, link, open, icon, onClose }) {
 
     const loc = useLocation()
     const reg = /(^\/|\/$)/
@@ -39,11 +41,15 @@ function SideBarMenuItem({ children, link, open }) {
     const n = useNavigate()
     return (
 
-        <div onClick={() => {
-            n(link)
-        }} className={`d-flex gap-2  side-bar-manu-item ${active}`}>
-            <div className={`fw-bolder text-center  ${!open && "w-100"}`}>
-                {/* icom */}ic
+        <div
+            onClick={() => {
+                n(link)
+                if (onClose !== null) onClose();
+            }}
+            className={`d-flex justify-content-start align-items-center gap-2  side-bar-manu-item ${active}`}
+        >
+            <div className={`fw-bolder text-center fs-5 ${!open && "w-100"}`}>
+                {icon}
             </div>
             {/* text */}
             {open && <div className={`overflow-hidden`}>{children}</div>}
