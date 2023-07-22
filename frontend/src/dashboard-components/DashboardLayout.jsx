@@ -27,7 +27,7 @@ const DashboardLayout = ({ children }) => {
                     <NavBar onToggleSideBar={toggle} />
                 </div>
                 {/* content */}
-                <div style={{ backgroundColor: "var(--bg-dashboard-color)" }} className=' h-100' >
+                <div style={{ backgroundColor: "var(--bg-dashboard-color)" }} className='p-1 h-100' >
                     {children}
                 </div>
             </div>
