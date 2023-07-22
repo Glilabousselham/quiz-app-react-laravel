@@ -1,4 +1,4 @@
-/* Default styles */
+
 .radioinput {
   display: none;
 }
@@ -13,7 +13,7 @@
   box-shadow: 1px 1px 5px black;
   overflow: hidden;
   border-radius: 8px;
-  /* Set a percentage width to make it responsive */
+ 
   width: 15%;
   text-align: center;
   position: relative;
@@ -26,7 +26,7 @@
   border: none;
   cursor: pointer;
   transition: background 0.1s;
-  /* Remove width property here to allow it to take the parent's width */
+ 
   text-align: center;
   width: 100%;
 }
@@ -52,7 +52,7 @@
   }
 
   .radio {
-    /* Adjust the width for smaller screens */
+
     width: 60%;
   }
 
