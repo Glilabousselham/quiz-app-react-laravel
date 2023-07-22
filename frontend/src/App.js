@@ -1,9 +1,10 @@
 
 import './App.css';
 import{BrowserRouter,Routes,Route}from 'react-router-dom'
-import SingUp from './Sing/singup/SingUp';
-import SingIn from './Sing/singin/SingIn';
-import Test from './Test/Test';
+import SingUp from './components/singup/SingUp';
+import SingIn from './components/singin/SingIn';
+import Test from './components/test/Test'
+import Answer from './components/answer/Answer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Route path="/signup" element={<SingUp/>}/>
      <Route path="/signin" element={<SingIn/>}/>
      <Route path="/test" element={<Test/>}/>
+     <Route path="/answer" element={<Answer/>}/>
      </Routes>
       </BrowserRouter>
    
