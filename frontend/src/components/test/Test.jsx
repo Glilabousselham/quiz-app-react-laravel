@@ -9,17 +9,17 @@ export default function Test() {
     <div>
       <form>
         <div className="input-group">
-          <div className="w-25 w-md-25 rounded-3 m-3 p-2"> 
+          <div className=" rounded-3  p-3" > 
             <input
               type="search"
               className="form-control"
               placeholder="Search..."
               onChange={(e) => setSearch(e.target.value)}
-            />
+            /><FaSistrix style={{ position: "relative", left:"75%",bottom:'55%'}} />
           </div>
-          <FaSistrix style={{ position: "relative", top: "35px", right: '5%' }} />
-          <div className="input-group-append" style={{ position: "relative", left: "47%", top: '17px' }}>
-            <button className="btn btn m-2 p-1 w-100 fs-5" type="submit" style={{ backgroundColor: "#7FDBFF" }}>create to test</button>
+          
+          <div className="input-group-append" style={{ position: "relative", left: "40%", top: '20px' }}>
+            <button className="btn btn   w-100 fs-6" type="submit" style={{ backgroundColor: "#7FDBFF", }}>create to test</button>
           </div>
         </div>
       </form>
@@ -55,6 +55,18 @@ export default function Test() {
             <td>80%</td>
             <td>Adil</td>
             <td>05/12/2022</td>
+            <td>
+              <button type="button" className="btn btn-warning">Show</button>
+              <button type="button" className="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Php</td>
+            <td>finish</td>
+            <td>90%</td>
+            <td>Glila</td>
+            <td>7/11/2022</td>
             <td>
               <button type="button" className="btn btn-warning">Show</button>
               <button type="button" className="btn btn-danger">Delete</button>

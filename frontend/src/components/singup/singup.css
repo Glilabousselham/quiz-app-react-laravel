@@ -1,1 +1,28 @@
-/* You can add this to your CSS file or use inline styles */
+/* Media query for iPhone 5/SE and similar */
+@media (max-width: 320px) {
+    .col-sm-12 {
+      width: 100%;
+    }
+  }
+  
+  /* Media query for iPhone 6/7/8, iPhone X, XS, 11 Pro, 12 mini, and similar */
+  @media (min-width: 321px) and (max-width: 375px) {
+    .col-sm-12 {
+      width: 100%;
+    }
+  }
+  
+  /* Media query for iPhone 6/7/8 Plus, iPhone XR, 11, 11 Pro Max, 12, 12 Pro, and similar */
+  @media (min-width: 376px) and (max-width: 414px) {
+    .col-sm-12 {
+      width: 100%;
+    }
+  }
+  
+  /* Media query for iPhone 12 Pro Max and similar */
+  @media (min-width: 415px) {
+    .col-sm-12 {
+      width: 100%;
+    }
+  }
+  

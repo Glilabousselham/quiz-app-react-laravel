@@ -12,14 +12,13 @@ export default function Answer() {
 const handleSubmit = (event) => {
   event.preventDefault();
   if (selectedOption !== null) {
-    alert("Vous avez sélectionné: " + selectedOption); // Concatenate the selectedOption value
-    // Vous pouvez ajouter le traitement de chaque réponse ici
+    alert("Vous avez sélectionné: " + selectedOption); 
   } else {
     alert("Veuillez sélectionner une option.");
   }
 };
 
-// ... (existing code)
+
 
 
   return (
@@ -54,7 +53,7 @@ const handleSubmit = (event) => {
               <label htmlFor="radio4" className="radio--label fs-5 "> php</label>
             </div>
           </div>
-          <div className="d-grid ms-auto mt-5 ml-5" style={{ position: 'relative', right: "18%", top: '32px', width: '8%' }}>
+          <div className="d-grid ms-auto mt-3 ml-5" style={{ position: 'relative', right: "18%", top: '32px', width: '8%' }}>
             <button className="btn btn-primary custom-button p-2 bg-info fs-4 text-dark" >next</button>
           </div>
         </div>

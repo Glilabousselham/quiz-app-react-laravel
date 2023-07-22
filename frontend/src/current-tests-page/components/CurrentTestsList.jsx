@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom"
 
 const cardHeight = "150px"
 
-
 const CurrentTestsList = () => {
     return (
         <div className='row p-0 m-0'>

@@ -11,9 +11,10 @@ export default function SignUp() {
     <div className='container mt-5'>
       <div className='row'>
         <form className='d-flex justify-content-center'>
-          <div className="col-md-9 col-lg-6 rounded-3 p-4" style={{ boxShadow: '3px 1px 20px black' }}>
-            <h1 className="text-center">Sign Up</h1>
-            <label htmlFor="fullName" className='mb-3 fs-4'> FullName </label>
+          <div className="col-md-4  rounded-3  p-2 " style={{ boxShadow: '3px 1px 20px black', height:'100%',width:"480px" }}>
+            <div style={{position:"relative",}}>
+            <h1 className="text-center mt-3">Sign Up</h1>
+            <label htmlFor="fullName" className=' fs-5  mb-1 ' style={{position:"relative",left:'12%'}}> FullName </label><br/>
             <input
               type="text"
               name="fullName"
@@ -21,10 +22,10 @@ export default function SignUp() {
               placeholder='Enter your FullName'
               value={Nom}
               onChange={(e) => setFullName(e.target.value)}
-              className='w-100 rounded-3 p-3 mb-3'
-              style={{ backgroundColor: "#F4FAFA" }}
-            />
-            <label htmlFor="email" className='mb-3 fs-4'> Email </label>
+              className=' rounded-3  mb-1 '
+              style={{ backgroundColor: "#F4FAFA",position:"relative",left:'9%',padding:'11px',width:'85%' }}
+            /><br/>
+            <label htmlFor="email" className=' fs-5 ml-4  mb-1 ' style={{position:"relative",left:'9%',}}> Email </label><br/>
             <input
               type="email"
               name="email"
@@ -32,9 +33,9 @@ export default function SignUp() {
               placeholder='Enter your Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className='w-100 rounded-3 p-3 mb-3'
-              style={{ backgroundColor: "#F4FAFA" }} />
-            <label htmlFor="password" className='mb-3 fs-4'> Password </label>
+              className=' rounded-3   '
+              style={{ backgroundColor: "#F4FAFA",position:"relative",left:'9%',padding:'11px',width:'85%' }} /><br/>
+            <label htmlFor="password" className=' fs-5 mb-1 ' style={{position:"relative",left:'9%',}}> Password </label><br/>
             <input
               type="password"
               name="password"
@@ -42,10 +43,10 @@ export default function SignUp() {
               placeholder='Enter your Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className='w-100 rounded-3 p-3 mb-3'
-              style={{ backgroundColor: "#F4FAFA" }}
-            />
-            <div className="form-check mb-3">
+              className=' rounded-3  mb-1'
+              style={{ backgroundColor: "#F4FAFA",position:"relative",left:'9%',padding:'11px',width:'85%' }}
+            /><br/>
+            <div className="form-check mb-3" style={{position:"relative",left:"12%"}}>
               <input
                 type="checkbox"
                 name="acceptTerm"
@@ -54,12 +55,13 @@ export default function SignUp() {
                 onChange={(e) => setAcceptterm(e.target.checked)}
                 className="form-check-input"
               />
-              <label htmlFor="acceptTerm" className="form-check-label">I accept the terms</label>
+              <label htmlFor="acceptTerm" className="form-check-label ">I accept the terms</label>
             </div>
-            <div className="d-grid  w-50  ms-auto mb-3" style={{ position: 'relative', right: "22%", top: '20px' }}>
-              <button className="btn btn-primary custom-button p-2 bg-info fs-4 text-dark" >Sign Up</button>
+            <div className="d-grid  w-75  ms-auto mb-5" style={{ position: 'relative', right: "12%", top: '20px' }}>
+              <button className="btn btn-primary custom-button  bg-info fs-4 text-dark" >Sign Up</button>
             </div>
           </div>
+         </div> 
         </form>
       </div>
     </div>
